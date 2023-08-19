@@ -1,29 +1,18 @@
-
-
-
-
-
-
-
-
-
-
-
 // xArm Coordinate Configuration
 float x, y = 0;
 float x_processing, y_processing;
 float x_robot, y_robot; 
-float z_robot = 80; // shift to tune pen height relative to paper
+float z_robot = 82; // shift to tune pen height relative to paper
 int real_height = 280; // Letter-Sized Paper Height
 int real_width = 216; // Letter-Sized Paper Width
 int robot_x_offset = 680; // X of top left coordinate where xArm should start typing. 
 
 //Font & Spacing Customization
-String font = "CourierNew"; 
+String font = "Times"; 
 //Change this to change font selection. 
 // to add custom font, look below or go to https://npothu.github.io/posts/xArmTypewriter/
 String font_file = "Fonts/"+font+".csv";
-int txtSize = 70;
+int txtSize = 120;
 int margin = 15;
 //int gap = 15;
 float space = 2;

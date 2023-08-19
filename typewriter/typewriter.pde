@@ -1,9 +1,7 @@
 void setup() {
   fontSelector();
-  size(500, 500);
+  size(400, 400);
   background(0);
-  //PFont sourceFont = createFont("Verdana", 24);
-  //textFont(sourceFont);
   output = createWriter("positions.csv");
   createArray();
   // Initializes 3D ArrayList to match char/point/x-y-coords
@@ -123,7 +121,7 @@ void createArray() {
         num++;
       }
     }
-    //println("Character " + char(letter + starting_ascii) + ":" + letter);
+    //For troubleshooting: println("Character " + char(letter + starting_ascii) + ":" + letter);
   }
 }
 
@@ -168,46 +166,3 @@ void keyPressed() {
   }
 }
 
-
-
-  //!"#&0469:;=?@ADOPQRabdegijopq
-  // Add an else if statement with your conditions to add a new font
-/*
-public static void executePython() {
-try{
-  // Create a process builder
-  ProcessBuilder pb = new ProcessBuilder("python", "script.py");
-  // Start the process
-  Process p = pb.start();
-
-  // Wait for the process to finish
-  p.waitFor(10, TimeUnit.SECONDS);
-
-  // Check the exit code
-  int exitCode = p.exitValue();
-  if (exitCode != 0) {
-    System.out.println("The process exited with code " + exitCode);
-  } else {
-    System.out.println("The process exited successfully");
-  }
-}
-
-catch(Exception e){
-  println("dam");
-}
-}
-/*
-/*
-public static void executePython() {
-        PythonInterpreter interpreter = new PythonInterpreter();
-        interpreter.execfile("my_script.py");
-    }
-
-public static void executePython() {
-        PythonInterpreter interpreter = new PythonInterpreter();
-        System.out.println("Java runs python code using jython");
-        interpreter.execfile("C:/Users/water/Desktop/RDF/xTypeWriter/Processing/v11/script.py");
-        System.out.println("x: " + interpreter.get("x"));
-        System.out.println("x: " + interpreter.get("y"));
-    }
-    */

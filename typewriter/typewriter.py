@@ -12,14 +12,15 @@ arm = XArmAPI(ip)
 arm.motion_enable(enable=True)
 arm.set_mode(0)
 arm.set_state(state=0)
-speed = 45
+speed = 80
 acceleration = 10
 
 
 filepath = os.path.dirname(os.path.realpath(__file__)) + '\positions.csv'
 cTime = os.path.getmtime(filepath)
 
-i, n = 0
+i = 0
+n = 0
 
 while True:
     time.sleep(2)
@@ -52,46 +53,3 @@ while True:
                     n+=1
                 i+=1
 arm.disconnect();
-             
-
-         
-    
-    
-
-
-
-
-
-"""
-arm.set_servo_angle(angle=[90, 0, 0, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[90, 0, -60, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[90, -30, -60, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, -30, -60, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, 0, -60, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, 0, 0, 0, 0, 0], speed=speed, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-
-
-arm.reset(wait=True)
-speed = math.radians(50)
-arm.set_servo_angle(angle=[math.radians(90), 0, 0, 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[math.radians(90), 0, math.radians(-60), 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[math.radians(90), math.radians(-30), math.radians(-60), 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, math.radians(-30), math.radians(-60), 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, 0, math.radians(-60), 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-arm.set_servo_angle(angle=[0, 0, 0, 0, 0, 0], speed=speed, is_radian=True, wait=True)
-print(arm.get_servo_angle(), arm.get_servo_angle(is_radian=True))
-
-"""
-
-#arm.reset(wait=True)

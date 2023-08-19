@@ -1,11 +1,3 @@
-// ISSUE --> Not all Letters have 200 points.
-// I have them as coordinates, but they aren't translated
-//import java.io.IOException;
-//import java.util.concurrent.TimeUnit;
-//import org.python.util.PythonInterpreter;
-//import java.io.IOException;
-//import java.util.concurrent.TimeUnit;
-
 float x, y = 0;
 float x_processing, y_processing;
 float z_robot, y_robot;
@@ -45,11 +37,8 @@ float spacing = 0;
 
 
 void setup() {
-  //launch("C:/Users/water/Downloads/xArm-Python-SDK-master/example/wrapper/xarm6/script1.exe");
   size(500, 500);
   background(0);
-  //PFont sourceFont = createFont("Verdana", 24);
-  //textFont(sourceFont);
   output = createWriter("positions.csv");
   createArray();
   // Initializes 3D ArrayList to match char/point/x-y-coords
@@ -128,7 +117,6 @@ void createArray() {
 
   // Filling in array w/ points
   String[] txt_array = loadStrings(font_file);
-  //String[] dotCoords;
   int num = 0;
   for (int letter = 0; letter < num_chars; letter++) {
 
@@ -156,7 +144,6 @@ void createArray() {
         num++;
       }
     }
-    //println("Character " + char(letter + starting_ascii) + ":" + letter);
   }
 }
 
@@ -200,42 +187,3 @@ void keyPressed() {
     loop();
   }
 }
-/*
-public static void executePython() {
-try{
-  // Create a process builder
-  ProcessBuilder pb = new ProcessBuilder("python", "script.py");
-  // Start the process
-  Process p = pb.start();
-
-  // Wait for the process to finish
-  p.waitFor(10, TimeUnit.SECONDS);
-
-  // Check the exit code
-  int exitCode = p.exitValue();
-  if (exitCode != 0) {
-    System.out.println("The process exited with code " + exitCode);
-  } else {
-    System.out.println("The process exited successfully");
-  }
-}
-
-catch(Exception e){
-  println("dam");
-}
-}
-/*
-/*
-public static void executePython() {
-        PythonInterpreter interpreter = new PythonInterpreter();
-        interpreter.execfile("my_script.py");
-    }
-
-public static void executePython() {
-        PythonInterpreter interpreter = new PythonInterpreter();
-        System.out.println("Java runs python code using jython");
-        interpreter.execfile("C:/Users/water/Desktop/RDF/xTypeWriter/Processing/v11/script.py");
-        System.out.println("x: " + interpreter.get("x"));
-        System.out.println("x: " + interpreter.get("y"));
-    }
-    */
